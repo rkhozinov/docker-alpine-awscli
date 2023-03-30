@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish Alpine version to GitHub Package Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: rkhozinov/docker-alpine-awscli/docker-alpine-awscli
         username: ${{ secrets.GITHUB_PACKAGE_REGISTRY_USERNAME }}
@@ -21,7 +21,7 @@ jobs:
    steps:
    - uses: actions/checkout@master
    - name: Publish to Dockerhub
-     uses: elgohr/Publish-Docker-Github-Action@master
+     uses: elgohr/Publish-Docker-Github-Action@v5
      with:
        name: rkhozinov/alpine-awscli
        username: ${{ secrets.DOCKERHUB_USERNAME }}
